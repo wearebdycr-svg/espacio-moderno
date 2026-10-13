@@ -1,0 +1,114 @@
+import type { Metadata } from "next";
+import "./styles.css";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Espacio Moderno | Muebles a Medida y Diseño de Interiores en Itagüí y Medellín",
+    template: "%s | Espacio Moderno",
+  },
+  description:
+    "Fábrica de muebles a medida de alta gama en Itagüí, Medellín y Valle de Aburrá. Comedores en roble, salas modulares, mobiliario arquitectónico y diseño sobre medida. Cotiza por WhatsApp.",
+  keywords: [
+    "muebles a medida Medellín",
+    "muebles a medida Itagüí",
+    "fábrica de muebles Itagüí",
+    "comedores en madera maciza Medellín",
+    "salas modulares Envigado",
+    "diseño de interiores Valle de Aburrá",
+    "ebanistería fina Antioquia",
+    "mobiliario personalizado Sabaneta",
+    "Espacio Moderno",
+  ],
+  authors: [{ name: "Espacio Moderno" }],
+  creator: "Espacio Moderno",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Espacio Moderno | Muebles a Medida en Itagüí, Medellín y Valle de Aburrá",
+    description:
+      "Mobiliario contemporáneo sobre medida, maderas nobles seleccionadas y acabados arquitectónicos. Cotiza directo con nuestro taller por WhatsApp.",
+    url: siteConfig.url,
+    siteName: "Espacio Moderno",
+    locale: "es_CO",
+    type: "website",
+    images: [
+      {
+        url: "/images/hero-room.png",
+        width: 1200,
+        height: 630,
+        alt: "Espacio Moderno - Mobiliario a Medida y Diseño de Interiores",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Espacio Moderno | Muebles a Medida en Itagüí y Medellín",
+    description:
+      "Fábrica de mobiliario contemporáneo sobre medida en el Valle de Aburrá. Cotiza directo por WhatsApp.",
+    images: ["/images/hero-room.png"],
+  },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FurnitureStore",
+    name: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    telephone: siteConfig.phone,
+    image: `${siteConfig.url}/images/hero-room.png`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Itagüí",
+      addressRegion: "Antioquia",
+      addressCountry: "CO",
+    },
+    areaServed: [
+      "Itagüí",
+      "Medellín",
+      "Envigado",
+      "Sabaneta",
+      "La Estrella",
+      "Bello",
+      "Valle de Aburrá",
+      "Rionegro",
+    ],
+    sameAs: [siteConfig.instagramUrl],
+    priceRange: "$$$",
+  };
+
+  return (
+    <html lang="es" className="antialiased scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col bg-[#F5F2EB] text-[#1A1A1A] font-sans">
+        {children}
+      </body>
+    </html>
+  );
+}
+
+
