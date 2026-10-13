@@ -50,7 +50,7 @@ export default function PrivacidadPage() {
                 1. Identificación del Responsable del Tratamiento
               </h2>
               <p className="text-sm text-[#6B635B] leading-relaxed pl-7">
-                <strong>ESPACIO MODERNO</strong>, taller de diseño y fabricación de mobiliario contemporáneo sobre medida, con sede operativa en el municipio de <strong>Itagüí, Antioquia</strong>, atendiendo el Área Metropolitana del Valle de Aburrá (Medellín, Itagüí, Envigado, Sabaneta, Bello, La Estrella) y despachos nacionales. Línea oficial de WhatsApp: <span className="font-semibold text-[#1A1A1A] font-mono">312 451 8951</span>.
+                <strong>ESPACIO MODERNO</strong>, taller de diseño y fabricación de mobiliario contemporáneo sobre medida, con sede operativa en el municipio de <strong>Itagüí, Antioquia</strong>, atendiendo el Área Metropolitana del Valle de Aburrá (Medellín, Itagüí, Envigado, Sabaneta, Bello, La Estrella) y despachos nacionales. Línea oficial de WhatsApp: <span className="font-semibold text-[#1A1A1A] font-mono">314 297 9756</span>.
               </p>
             </section>
 
@@ -101,7 +101,7 @@ export default function PrivacidadPage() {
                 5. Derechos del Titular (Habeas Data)
               </h2>
               <p className="text-sm text-[#6B635B] leading-relaxed pl-7">
-                De acuerdo con la legislación colombiana (Ley 1581 de 2012), usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento. Para ejercer estos derechos, puede comunicarse directamente vía WhatsApp al <span className="font-semibold text-[#1A1A1A] font-mono">312 451 8951</span>.
+                De acuerdo con la legislación colombiana (Ley 1581 de 2012), usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento. Para ejercer estos derechos, puede comunicarse directamente vía WhatsApp al <span className="font-semibold text-[#1A1A1A] font-mono">314 297 9756</span>.
               </p>
             </section>
 
@@ -123,7 +123,7 @@ export default function PrivacidadPage() {
                 className="inline-flex items-center gap-2 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-5 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all shrink-0"
               >
                 <WhatsAppIcon className="h-4 w-4 fill-white" />
-                <span>Contactar al 312 451 8951</span>
+                <span>Contactar al 314 297 9756</span>
               </a>
             </div>
           </div>

@@ -125,7 +125,7 @@ export function LegalModal({
                   1. Identificación del Responsable del Tratamiento
                 </h4>
                 <p className="text-xs text-[#6B635B] pl-6">
-                  <strong>ESPACIO MODERNO</strong>, taller de diseño y fabricación de mobiliario a medida, con sede operativa en el municipio de <strong>Itagüí, Antioquia</strong>, atendiendo el Área Metropolitana del Valle de Aburrá (Medellín, Itagüí, Envigado, Sabaneta, Bello, La Estrella) y despachos nacionales. WhatsApp oficial de atención: <span className="font-semibold text-[#1A1A1A] font-mono">312 451 8951</span>.
+                  <strong>ESPACIO MODERNO</strong>, taller de diseño y fabricación de mobiliario a medida, con sede operativa en el municipio de <strong>Itagüí, Antioquia</strong>, atendiendo el Área Metropolitana del Valle de Aburrá (Medellín, Itagüí, Envigado, Sabaneta, Bello, La Estrella) y despachos nacionales. WhatsApp oficial de atención: <span className="font-semibold text-[#1A1A1A] font-mono">314 297 9756</span>.
                 </p>
               </section>
 
@@ -176,7 +176,7 @@ export function LegalModal({
                   5. Derechos del Titular (Habeas Data)
                 </h4>
                 <p className="text-xs text-[#6B635B] pl-6">
-                  Conforme a la Ley 1581 de 2012 de la República de Colombia, usted como titular tiene derecho a conocer, actualizar, rectificar y revocar la autorización o solicitar la eliminación total de sus datos personales de nuestros registros. Puede ejercer este derecho en cualquier momento mediante mensaje a nuestra línea WhatsApp <span className="font-semibold text-[#1A1A1A] font-mono">312 451 8951</span>.
+                  Conforme a la Ley 1581 de 2012 de la República de Colombia, usted como titular tiene derecho a conocer, actualizar, rectificar y revocar la autorización o solicitar la eliminación total de sus datos personales de nuestros registros. Puede ejercer este derecho en cualquier momento mediante mensaje a nuestra línea WhatsApp <span className="font-semibold text-[#1A1A1A] font-mono">314 297 9756</span>.
                 </p>
               </section>
             </div>

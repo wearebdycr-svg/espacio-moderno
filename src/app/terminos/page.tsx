@@ -120,7 +120,7 @@ export default function TerminosPage() {
                 className="inline-flex items-center gap-2 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-5 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all shrink-0"
               >
                 <WhatsAppIcon className="h-4 w-4 fill-white" />
-                <span>Consultar al 312 451 8951</span>
+                <span>Consultar al 314 297 9756</span>
               </a>
             </div>
           </div>

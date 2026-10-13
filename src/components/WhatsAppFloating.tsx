@@ -28,7 +28,7 @@ export function WhatsAppFloating() {
                 Asesor en línea ahora
               </span>
               <span className="font-bold text-white text-sm font-mono mt-0.5">
-                312 451 8951
+                314 297 9756
               </span>
               <span className="text-[11px] text-[#F5F2EB]/70 group-hover:text-[#B8935A] transition-colors">
                 Toca aquí para chatear ➔
@@ -55,7 +55,7 @@ export function WhatsAppFloating() {
         href={getWhatsAppUrl("¡Hola Espacio Moderno! Quisiera recibir asesoría y cotizar por WhatsApp.")}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contactar por WhatsApp al 312 451 8951"
+        aria-label="Contactar por WhatsApp al 314 297 9756"
         className="group relative pointer-events-auto flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#B8935A] text-white shadow-xl shadow-[#B8935A]/30 hover:bg-[#A4814E] hover:scale-110 active:scale-95 transition-all duration-300"
       >
         {/* Pulsing ring */}

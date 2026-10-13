@@ -4,9 +4,9 @@ export const siteConfig = {
   description:
     "Fabricación y diseño de muebles a medida de alta gama, arquitectura de interiores y remodelaciones. Piezas artesanales que combinan diseño contemporáneo y funcionalidad premium.",
   url: "https://espaciomoderno.co",
-  phone: "+573124518951",
-  phoneDisplay: "+57 312 451 8951",
-  whatsappNumber: "312 451 8951",
+  phone: "+573142979756",
+  phoneDisplay: "+57 314 297 9756",
+  whatsappNumber: "314 297 9756",
   address: "Itagüí, Antioquia • Valle de Aburrá, Colombia",
   instagram: "@espacio_moderno1",
   instagramUrl: "https://www.instagram.com/espacio_moderno1?psln=MXE5cjlhNWs4bnN4bg==",

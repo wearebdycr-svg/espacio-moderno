@@ -75,7 +75,7 @@ export function ContactQuote() {
                 <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-[#B8935A] text-white shadow-sm group-hover:scale-105 group-hover:bg-[#A4814E] transition-all">
                   <WhatsAppIcon className="h-7 w-7 sm:h-8 sm:w-8 fill-white" />
                 </div>
-                <span>312 451 8951</span>
+                <span>314 297 9756</span>
               </a>
 
               {/* Big Action Button en Bronce Antiguo (#B8935A) per Brand Manual */}

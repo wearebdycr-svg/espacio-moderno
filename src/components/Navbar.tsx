@@ -54,7 +54,7 @@ export function Navbar() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B8935A]"></span>
             </span>
             <WhatsAppIcon className="h-3.5 w-3.5 fill-[#B8935A] group-hover:scale-110 transition-transform" />
-            <span className="font-mono tracking-tight font-bold text-white">312 451 8951</span>
+            <span className="font-mono tracking-tight font-bold text-white">314 297 9756</span>
           </a>
         </nav>
 
@@ -104,7 +104,7 @@ export function Navbar() {
               className="flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-4 py-3 text-sm font-bold text-white shadow-md transition-colors"
             >
               <WhatsAppIcon className="h-4 w-4 fill-white" />
-              <span>WhatsApp: 312 451 8951</span>
+              <span>WhatsApp: 314 297 9756</span>
             </a>
           </div>
         </div>

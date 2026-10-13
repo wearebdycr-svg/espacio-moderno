@@ -38,7 +38,7 @@ export function Hero() {
             className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#B8935A] px-7 sm:px-9 py-4 text-[14px] font-semibold tracking-wider uppercase text-white shadow-sm hover:bg-[#A4814E] hover:scale-[1.02] active:scale-98 transition-all duration-300"
           >
             <WhatsAppIcon className="h-4 w-4 fill-white" />
-            <span>INICIAR MI PROYECTO (312 451 8951)</span>
+            <span>INICIAR MI PROYECTO (314 297 9756)</span>
           </a>
 
           <a
@@ -52,7 +52,7 @@ export function Hero() {
         {/* Live status badge */}
         <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#3B2F2F]/70 backdrop-blur-sm border border-[#F5F2EB]/15 px-4 py-1.5 text-[12px] text-[#F5F2EB]">
           <span className="h-2 w-2 rounded-full bg-[#B8935A] animate-pulse" />
-          <span>Atención en línea vía WhatsApp: <strong className="text-white font-mono">312 451 8951</strong></span>
+          <span>Atención en línea vía WhatsApp: <strong className="text-white font-mono">314 297 9756</strong></span>
         </div>
 
       </div>

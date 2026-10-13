@@ -153,7 +153,7 @@ export function Process() {
                   className="inline-flex items-center gap-2.5 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-7 py-3.5 text-[14px] font-semibold tracking-wider uppercase text-white shadow-sm hover:scale-[1.02] active:scale-98 transition-all"
                 >
                   <WhatsAppIcon className="h-4 w-4 fill-white" />
-                  <span>CHATEAR AL 312 451 8951</span>
+                  <span>CHATEAR AL 314 297 9756</span>
                 </a>
               </div>
             </div>

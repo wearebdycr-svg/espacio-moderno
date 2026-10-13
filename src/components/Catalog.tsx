@@ -260,7 +260,7 @@ export function Catalog() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#B8935A] bg-transparent px-6 sm:px-8 py-3.5 text-[14px] font-semibold tracking-wider uppercase text-[#1A1A1A] hover:bg-[#B8935A] hover:text-white transition-all shadow-xs"
           >
-            <span>Medidas Especiales (312 451 8951)</span>
+            <span>Medidas Especiales (314 297 9756)</span>
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>
