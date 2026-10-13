@@ -167,7 +167,7 @@ export function Footer() {
                   <span>Taller & Showroom Itagüí</span>
                 </div>
                 <a
-                  href="https://maps.google.com/?q=Itagui+Antioquia"
+                  href={siteConfig.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-[12px] text-[#B8935A] hover:underline group-hover:translate-x-0.5 transition-transform"

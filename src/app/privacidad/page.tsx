@@ -50,7 +50,7 @@ export default function PrivacidadPage() {
                 1. Identificación del Responsable del Tratamiento
               </h2>
               <p className="text-sm text-[#6B635B] leading-relaxed pl-7">
-                <strong>ESPACIO MODERNO</strong>, taller de diseño y fabricación de mobiliario contemporáneo sobre medida, con sede operativa en el municipio de <strong>Itagüí, Antioquia</strong>, atendiendo el Área Metropolitana del Valle de Aburrá (Medellín, Itagüí, Envigado, Sabaneta, Bello, La Estrella) y despachos nacionales. Línea oficial de WhatsApp: <span className="font-semibold text-[#1A1A1A] font-mono">314 297 9756</span>.
+                <strong>ESPACIO MODERNO</strong>, taller de diseño y fabricación de mobiliario contemporáneo sobre medida, con sede operativa en la <strong>Cra. 52 #35 - 46, Itagüí, Antioquia</strong>, atendiendo el Área Metropolitana del Valle de Aburrá (Medellín, Itagüí, Envigado, Sabaneta, Bello, La Estrella) y despachos nacionales. Línea oficial de WhatsApp: <span className="font-semibold text-[#1A1A1A] font-mono">314 297 9756</span>.
               </p>
             </section>
 

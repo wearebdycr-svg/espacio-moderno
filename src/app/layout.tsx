@@ -72,6 +72,7 @@ export default function RootLayout({
     image: `${siteConfig.url}/images/hero-room.png`,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Cra. 52 #35 - 46",
       addressLocality: "Itagüí",
       addressRegion: "Antioquia",
       addressCountry: "CO",

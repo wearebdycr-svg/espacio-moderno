@@ -7,7 +7,8 @@ export const siteConfig = {
   phone: "+573142979756",
   phoneDisplay: "+57 314 297 9756",
   whatsappNumber: "314 297 9756",
-  address: "Itagüí, Antioquia • Valle de Aburrá, Colombia",
+  address: "Cra. 52 #35 - 46, Itagüí, Antioquia",
+  mapsUrl: "https://maps.google.com/?q=Cra.+52+%2335-46,+Itag%C3%BC%C3%AD,+Antioquia",
   instagram: "@espacio_moderno1",
   instagramUrl: "https://www.instagram.com/espacio_moderno1?psln=MXE5cjlhNWs4bnN4bg==",
   whatsappDefaultMessage:
