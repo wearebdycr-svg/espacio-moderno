@@ -120,10 +120,13 @@ export default function PrivacidadPage() {
                 href={getWhatsAppUrl("¡Hola Espacio Moderno! Quisiera hacer una consulta sobre la protección de mis datos personales.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-5 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all shrink-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-5 py-3 text-white shadow-sm transition-all shrink-0"
               >
-                <WhatsAppIcon className="h-4 w-4 fill-white" />
-                <span>Contactar al 314 297 9756</span>
+                <WhatsAppIcon className="h-4 w-4 fill-white shrink-0" />
+                <div className="flex flex-col items-center leading-tight">
+                  <span className="text-xs font-bold uppercase tracking-wider">Contactar por WhatsApp</span>
+                  <span className="text-[11px] font-mono whitespace-nowrap text-white/95 mt-0.5">314 297 9756</span>
+                </div>
               </a>
             </div>
           </div>

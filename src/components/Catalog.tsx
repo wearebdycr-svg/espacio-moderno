@@ -258,10 +258,13 @@ export function Catalog() {
             href={getWhatsAppUrl("¡Hola! Busco un diseño especial o medidas personalizadas que no vi en la página.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#B8935A] bg-transparent px-6 sm:px-8 py-3.5 text-[14px] font-semibold tracking-wider uppercase text-[#1A1A1A] hover:bg-[#B8935A] hover:text-white transition-all shadow-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-lg border border-[#B8935A] bg-transparent px-6 sm:px-8 py-3 sm:py-3.5 text-[#1A1A1A] hover:bg-[#B8935A] hover:text-white transition-all shadow-xs group"
           >
-            <span>Medidas Especiales (314 297 9756)</span>
-            <ArrowRight className="h-4 w-4" />
+            <div className="flex flex-col items-center leading-tight">
+              <span className="text-[13px] sm:text-[14px] font-semibold tracking-wider uppercase">Medidas Especiales</span>
+              <span className="text-[12px] font-mono whitespace-nowrap text-[#B8935A] group-hover:text-white transition-colors mt-0.5">314 297 9756</span>
+            </div>
+            <ArrowRight className="h-4 w-4 shrink-0" />
           </a>
         </div>
       </div>

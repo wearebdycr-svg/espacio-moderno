@@ -150,10 +150,13 @@ export function Process() {
                   href={getWhatsAppUrl("¡Hola Espacio Moderno! Tengo una idea en mente y quiero cotizar con un asesor.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-7 py-3.5 text-[14px] font-semibold tracking-wider uppercase text-white shadow-sm hover:scale-[1.02] active:scale-98 transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] px-7 py-3 sm:py-3.5 text-white shadow-sm hover:scale-[1.02] active:scale-98 transition-all"
                 >
-                  <WhatsAppIcon className="h-4 w-4 fill-white" />
-                  <span>CHATEAR AL 314 297 9756</span>
+                  <WhatsAppIcon className="h-5 w-5 fill-white shrink-0" />
+                  <div className="flex flex-col items-center sm:items-start leading-tight">
+                    <span className="text-[13px] sm:text-[14px] font-semibold tracking-wider uppercase">CHATEAR POR WHATSAPP</span>
+                    <span className="text-[12px] font-mono whitespace-nowrap text-white/95 mt-0.5 font-medium">314 297 9756</span>
+                  </div>
                 </a>
               </div>
             </div>

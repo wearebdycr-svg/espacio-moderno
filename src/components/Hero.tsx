@@ -35,24 +35,30 @@ export function Hero() {
             href={getWhatsAppUrl("¡Hola Espacio Moderno! Quiero iniciar el diseño personalizado de mi espacio.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#B8935A] px-7 sm:px-9 py-4 text-[14px] font-semibold tracking-wider uppercase text-white shadow-sm hover:bg-[#A4814E] hover:scale-[1.02] active:scale-98 transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-lg bg-[#B8935A] px-7 sm:px-9 py-3 sm:py-4 text-white shadow-sm hover:bg-[#A4814E] hover:scale-[1.02] active:scale-98 transition-all duration-300"
           >
-            <WhatsAppIcon className="h-4 w-4 fill-white" />
-            <span>INICIAR MI PROYECTO (314 297 9756)</span>
+            <WhatsAppIcon className="h-5 w-5 fill-white shrink-0" />
+            <div className="flex flex-col items-center text-center leading-tight">
+              <span className="text-[13px] sm:text-[14px] font-semibold tracking-wider uppercase">INICIAR MI PROYECTO</span>
+              <span className="text-[12px] font-mono whitespace-nowrap text-white/95 font-medium tracking-normal mt-0.5">314 297 9756</span>
+            </div>
           </a>
 
           <a
             href="#colecciones"
-            className="inline-flex items-center justify-center rounded-lg bg-[#3B2F2F]/50 backdrop-blur-sm px-6 sm:px-8 py-4 text-[14px] font-semibold tracking-wider uppercase text-[#F5F2EB] hover:bg-[#3B2F2F]/80 transition-all border border-[#F5F2EB]/30"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-[#3B2F2F]/50 backdrop-blur-sm px-6 sm:px-8 py-3.5 sm:py-4 text-[13px] sm:text-[14px] font-semibold tracking-wider uppercase text-[#F5F2EB] hover:bg-[#3B2F2F]/80 transition-all border border-[#F5F2EB]/30"
           >
             VER CATÁLOGO
           </a>
         </div>
 
         {/* Live status badge */}
-        <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#3B2F2F]/70 backdrop-blur-sm border border-[#F5F2EB]/15 px-4 py-1.5 text-[12px] text-[#F5F2EB]">
-          <span className="h-2 w-2 rounded-full bg-[#B8935A] animate-pulse" />
-          <span>Atención en línea vía WhatsApp: <strong className="text-white font-mono">314 297 9756</strong></span>
+        <div className="mt-6 inline-flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 rounded-2xl sm:rounded-full bg-[#3B2F2F]/75 backdrop-blur-sm border border-[#F5F2EB]/15 px-4 py-2 sm:py-1.5 text-[12px] text-[#F5F2EB] max-w-full text-center">
+          <div className="flex items-center gap-1.5">
+            <span className="h-2 w-2 rounded-full bg-[#B8935A] animate-pulse shrink-0" />
+            <span>Atención en línea vía WhatsApp:</span>
+          </div>
+          <strong className="text-white font-mono whitespace-nowrap">314 297 9756</strong>
         </div>
 
       </div>

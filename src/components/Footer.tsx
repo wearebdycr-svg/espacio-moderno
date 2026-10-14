@@ -133,7 +133,7 @@ export function Footer() {
                   className="inline-flex items-center gap-2 text-[#F5F2EB]/90 hover:text-[#B8935A] transition-colors font-medium group"
                 >
                   <WhatsAppIcon className="h-3.5 w-3.5 fill-[#B8935A] shrink-0 group-hover:scale-110 transition-transform" />
-                  <span className="font-mono">{siteConfig.phoneDisplay} (WhatsApp)</span>
+                  <span className="font-mono whitespace-nowrap">{siteConfig.phoneDisplay} (WhatsApp)</span>
                 </a>
               </li>
 

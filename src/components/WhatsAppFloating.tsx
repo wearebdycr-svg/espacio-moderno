@@ -27,7 +27,7 @@ export function WhatsAppFloating() {
               <span className="text-[11px] font-medium text-[#B8935A] uppercase tracking-wider">
                 Asesor en línea ahora
               </span>
-              <span className="font-bold text-white text-sm font-mono mt-0.5">
+              <span className="font-bold text-white text-sm font-mono mt-0.5 whitespace-nowrap">
                 314 297 9756
               </span>
               <span className="text-[11px] text-[#F5F2EB]/70 group-hover:text-[#B8935A] transition-colors">
