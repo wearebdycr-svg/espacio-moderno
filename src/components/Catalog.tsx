@@ -274,15 +274,15 @@ export function Catalog() {
       {selectedProduct && currentModalProduct && (
         <div
           onClick={() => setSelectedProduct(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-5 md:p-6 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
         >
-          {/* Modal Card: Fondo Blanco Puro, Sombra sutil */}
+          {/* Modal Card: Tamaño mediano elegante, no ocupa toda la pantalla */}
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-4xl bg-[#FFFFFF] rounded-2xl shadow-2xl p-4 sm:p-7 md:p-9 border border-[#E8E0D5] max-h-[94vh] sm:max-h-[92vh] overflow-y-auto"
+            className="relative w-full max-w-lg sm:max-w-2xl md:max-w-3xl bg-[#FFFFFF] rounded-2xl shadow-2xl border border-[#E8E0D5] max-h-[82vh] sm:max-h-[85vh] flex flex-col overflow-hidden"
           >
-            {/* Sticky Header Bar: Siempre visible en mobile y desktop */}
-            <div className="sticky top-0 z-30 -mx-4 -mt-4 sm:-mx-7 sm:-mt-7 md:-mx-9 md:-mt-9 mb-4 px-4 sm:px-6 py-2.5 sm:py-3 bg-white/95 backdrop-blur-md border-b border-[#E8E0D5] flex items-center justify-between shadow-xs">
+            {/* Header Fijo al Top Total de la Modal */}
+            <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 bg-[#FFFFFF] border-b border-[#E8E0D5] shrink-0 z-10 shadow-xs">
               <button
                 type="button"
                 onClick={() => setSelectedProduct(null)}
@@ -303,128 +303,130 @@ export function Catalog() {
               </button>
             </div>
 
-            {/* Modal Body */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
-              {/* Left Column: Big Image & Thumbnail Carousel */}
-              <div className="md:col-span-7 flex flex-col">
-                {/* Main Image Container with Navigation Arrows */}
-                <div className="relative h-64 sm:h-80 md:h-[390px] w-full rounded-xl overflow-hidden bg-[#FAF7F2] shadow-sm group select-none">
-                  <img
-                    src={currentModalProduct.image}
-                    alt={currentModalProduct.name}
-                    className="h-full w-full object-cover object-center transition-all duration-300"
-                  />
+            {/* Modal Body Desplazable */}
+            <div className="overflow-y-auto p-4 sm:p-6 md:p-7 flex-1 overscroll-contain">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-center">
+                {/* Left Column: Big Image & Thumbnail Carousel */}
+                <div className="md:col-span-7 flex flex-col">
+                  {/* Main Image Container with Navigation Arrows */}
+                  <div className="relative h-48 sm:h-64 md:h-72 w-full rounded-xl overflow-hidden bg-[#FAF7F2] shadow-sm group select-none">
+                    <img
+                      src={currentModalProduct.image}
+                      alt={currentModalProduct.name}
+                      className="h-full w-full object-cover object-center transition-all duration-300"
+                    />
 
-                  {/* Left Arrow < */}
+                    {/* Left Arrow < */}
+                    {safeModalProducts.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={handlePrev}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-black/45 hover:bg-black/75 text-white backdrop-blur-sm transition-all shadow-md active:scale-95"
+                        aria-label="Anterior"
+                      >
+                        <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+                      </button>
+                    )}
+
+                    {/* Right Arrow > */}
+                    {safeModalProducts.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={handleNext}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-black/45 hover:bg-black/75 text-white backdrop-blur-sm transition-all shadow-md active:scale-95"
+                        aria-label="Siguiente"
+                      >
+                        <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+                      </button>
+                    )}
+
+                    {/* Badge */}
+                    {currentModalProduct.badge && (
+                      <span className="absolute top-3 left-3 rounded-md bg-[#B8935A] px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-white shadow-sm">
+                        {currentModalProduct.badge}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Thumbnail Strip */}
                   {safeModalProducts.length > 1 && (
-                    <button
-                      type="button"
-                      onClick={handlePrev}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-black/45 hover:bg-black/75 text-white backdrop-blur-sm transition-all shadow-md active:scale-95"
-                      aria-label="Anterior"
-                    >
-                      <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </button>
-                  )}
-
-                  {/* Right Arrow > */}
-                  {safeModalProducts.length > 1 && (
-                    <button
-                      type="button"
-                      onClick={handleNext}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-black/45 hover:bg-black/75 text-white backdrop-blur-sm transition-all shadow-md active:scale-95"
-                      aria-label="Siguiente"
-                    >
-                      <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </button>
-                  )}
-
-                  {/* Badge */}
-                  {currentModalProduct.badge && (
-                    <span className="absolute top-3.5 left-3.5 rounded-md bg-[#B8935A] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                      {currentModalProduct.badge}
-                    </span>
+                    <div className="mt-3 flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none select-none">
+                      {safeModalProducts.map((p, idx) => {
+                        const isActive = idx === activeModalIndex;
+                        return (
+                          <button
+                            key={p.id}
+                            type="button"
+                            onClick={() => setActiveModalIndex(idx)}
+                            className={`relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+                              isActive
+                                ? "border-[#B8935A] ring-2 ring-[#B8935A]/30 scale-105"
+                                : "border-transparent opacity-60 hover:opacity-100 hover:border-[#D8C6B0]"
+                            }`}
+                          >
+                            <img
+                              src={p.image}
+                              alt={p.name}
+                              className="h-full w-full object-cover"
+                            />
+                          </button>
+                        );
+                      })}
+                    </div>
                   )}
                 </div>
 
-                {/* Thumbnail Strip */}
-                {safeModalProducts.length > 1 && (
-                  <div className="mt-4 flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none select-none">
-                    {safeModalProducts.map((p, idx) => {
-                      const isActive = idx === activeModalIndex;
-                      return (
-                        <button
-                          key={p.id}
-                          type="button"
-                          onClick={() => setActiveModalIndex(idx)}
-                          className={`relative h-14 w-14 sm:h-18 sm:w-18 shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
-                            isActive
-                              ? "border-[#B8935A] ring-2 ring-[#B8935A]/30 scale-105"
-                              : "border-transparent opacity-60 hover:opacity-100 hover:border-[#D8C6B0]"
-                          }`}
-                        >
-                          <img
-                            src={p.image}
-                            alt={p.name}
-                            className="h-full w-full object-cover"
-                          />
-                        </button>
-                      );
-                    })}
+                {/* Right Column: Title, Description, Reference & Actions */}
+                <div className="md:col-span-5 flex flex-col justify-center text-left">
+                  <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-widest text-[#B8935A] font-sans">
+                    {currentModalProduct.category}
+                  </span>
+
+                  <h3 className="mt-1 text-xl sm:text-2xl font-semibold text-[#1A1A1A] font-serif leading-tight">
+                    {currentModalProduct.name}
+                  </h3>
+
+                  <p className="mt-2 text-[13px] sm:text-[14px] text-[#6B635B] leading-relaxed font-sans">
+                    {currentModalProduct.description}
+                  </p>
+
+                  {/* Reference Code */}
+                  <p className="mt-2.5 text-xs font-mono font-semibold text-[#6B635B]">
+                    Ref.{" "}
+                    {currentModalProduct.refCode ||
+                      `EM-${currentModalProduct.id.slice(0, 6).toUpperCase()}`}
+                  </p>
+
+                  {/* Primary WhatsApp Action Button */}
+                  <div className="mt-4 pt-1 pb-2">
+                    <a
+                      href={getWhatsAppUrl(
+                        `¡Hola Espacio Moderno! ¡LO QUIERO! Me interesa cotizar el producto ${
+                          currentModalProduct.name
+                        } (${
+                          currentModalProduct.refCode
+                            ? `Ref: ${currentModalProduct.refCode}`
+                            : ""
+                        }) que vi en su catálogo.`
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] text-white py-3 sm:py-3.5 px-4 text-[13px] sm:text-[14px] font-semibold uppercase tracking-wider shadow-sm hover:scale-[1.01] active:scale-98 transition-all"
+                    >
+                      <WhatsAppIcon className="h-4 w-4 fill-white shrink-0" />
+                      <span>¡LO QUIERO! - Cotizar por WhatsApp</span>
+                    </a>
+
+                    {/* Secondary Return Button */}
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProduct(null)}
+                      className="mt-2.5 flex w-full items-center justify-center gap-2 rounded-lg border border-[#D8C6B0] bg-white hover:bg-[#F5F2EB] text-[#1A1A1A] py-2.5 sm:py-3 px-4 text-[13px] font-semibold transition-colors shadow-xs"
+                    >
+                      <ArrowLeft className="h-4 w-4 text-[#B8935A]" />
+                      <span>Volver al catálogo</span>
+                    </button>
                   </div>
-                )}
-              </div>
-
-              {/* Right Column: Title, Description, Reference & Actions */}
-              <div className="md:col-span-5 flex flex-col justify-center text-left">
-                <span className="text-[11px] font-semibold uppercase tracking-widest text-[#B8935A] font-sans">
-                  {currentModalProduct.category}
-                </span>
-
-                <h3 className="mt-1.5 text-2xl sm:text-[28px] font-semibold text-[#1A1A1A] font-serif leading-tight">
-                  {currentModalProduct.name}
-                </h3>
-
-                <p className="mt-3 text-[14px] sm:text-[15px] text-[#6B635B] leading-relaxed font-sans">
-                  {currentModalProduct.description}
-                </p>
-
-                {/* Reference Code */}
-                <p className="mt-4 text-xs font-mono font-semibold text-[#6B635B]">
-                  Ref.{" "}
-                  {currentModalProduct.refCode ||
-                    `EM-${currentModalProduct.id.slice(0, 6).toUpperCase()}`}
-                </p>
-
-                {/* Primary WhatsApp Action Button */}
-                <div className="mt-6 pt-2">
-                  <a
-                    href={getWhatsAppUrl(
-                      `¡Hola Espacio Moderno! ¡LO QUIERO! Me interesa cotizar el producto ${
-                        currentModalProduct.name
-                      } (${
-                        currentModalProduct.refCode
-                          ? `Ref: ${currentModalProduct.refCode}`
-                          : ""
-                      }) que vi en su catálogo.`
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#B8935A] hover:bg-[#A4814E] text-white py-3.5 sm:py-4 px-6 text-[14px] font-semibold uppercase tracking-wider shadow-sm hover:scale-[1.01] active:scale-98 transition-all"
-                  >
-                    <WhatsAppIcon className="h-4 w-4 fill-white" />
-                    <span>¡LO QUIERO! - Cotizar por WhatsApp</span>
-                  </a>
-
-                  {/* Secondary Return Button */}
-                  <button
-                    type="button"
-                    onClick={() => setSelectedProduct(null)}
-                    className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-[#D8C6B0] bg-white hover:bg-[#F5F2EB] text-[#1A1A1A] py-3.5 px-6 text-[14px] font-semibold transition-colors shadow-xs"
-                  >
-                    <ArrowLeft className="h-4 w-4 text-[#B8935A]" />
-                    <span>Volver al catálogo</span>
-                  </button>
                 </div>
               </div>
             </div>

@@ -156,23 +156,29 @@ export function Footer() {
             <h4 className="text-[14px] font-semibold uppercase tracking-wider text-[#F5F2EB] mb-4 font-sans">
               Visítanos
             </h4>
-            <div className="relative overflow-hidden rounded-xl border border-[#4E3E3E] bg-[#342929] h-36 flex flex-col justify-end p-3.5 group">
-              {/* Map background illustration */}
-              <div className="absolute inset-0 bg-[#2D2323] opacity-80">
-                <div className="w-full h-full bg-[radial-gradient(#4E3E3E_1px,transparent_1px)] [background-size:12px_12px]" />
-              </div>
-              <div className="relative z-10 flex items-center justify-between">
-                <div className="flex items-center gap-1.5 text-xs text-[#F5F2EB] font-medium">
-                  <MapPin className="h-3.5 w-3.5 text-[#B8935A]" />
-                  <span>Taller & Showroom Itagüí</span>
+            <div className="relative overflow-hidden rounded-xl border border-[#4E3E3E] bg-[#342929] h-44 flex flex-col justify-between group shadow-sm">
+              {/* Real Interactive Google Maps iframe */}
+              <iframe
+                title="Ubicación de Espacio Moderno en Itagüí"
+                src="https://maps.google.com/maps?q=Cra.+52+%2335-46,+Itag%C3%BC%C3%AD,+Antioquia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full border-0 filter contrast-[0.95] opacity-90 group-hover:opacity-100 transition-opacity"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              
+              {/* Bottom bar inside card with address and link */}
+              <div className="relative z-10 flex items-center justify-between p-2.5 bg-[#2E2424]/95 backdrop-blur-md border-t border-[#4E3E3E]">
+                <div className="flex items-center gap-1.5 text-xs text-[#F5F2EB] font-medium truncate">
+                  <MapPin className="h-3.5 w-3.5 text-[#B8935A] shrink-0" />
+                  <span className="truncate">Cra. 52 #35 - 46, Itagüí</span>
                 </div>
                 <a
                   href={siteConfig.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-[12px] text-[#B8935A] hover:underline group-hover:translate-x-0.5 transition-transform"
+                  className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-[#B8935A] hover:underline shrink-0 ml-2"
                 >
-                  <span>Ver mapa</span>
+                  <span>Abrir</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
