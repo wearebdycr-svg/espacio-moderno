@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
@@ -274,22 +274,34 @@ export function Catalog() {
       {selectedProduct && currentModalProduct && (
         <div
           onClick={() => setSelectedProduct(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/65 backdrop-blur-sm animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-5 md:p-6 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
         >
           {/* Modal Card: Fondo Blanco Puro, Sombra sutil */}
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-4xl bg-[#FFFFFF] rounded-2xl shadow-2xl p-5 sm:p-8 md:p-10 border border-[#E8E0D5] max-h-[92vh] overflow-y-auto"
+            className="relative w-full max-w-4xl bg-[#FFFFFF] rounded-2xl shadow-2xl p-4 sm:p-7 md:p-9 border border-[#E8E0D5] max-h-[94vh] sm:max-h-[92vh] overflow-y-auto"
           >
-            {/* Close Button X */}
-            <button
-              type="button"
-              onClick={() => setSelectedProduct(null)}
-              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-[#6B635B] hover:text-[#1A1A1A] p-2 rounded-full hover:bg-[#F5F2EB] transition-colors z-10"
-              aria-label="Cerrar ventana"
-            >
-              <X className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
+            {/* Sticky Header Bar: Siempre visible en mobile y desktop */}
+            <div className="sticky top-0 z-30 -mx-4 -mt-4 sm:-mx-7 sm:-mt-7 md:-mx-9 md:-mt-9 mb-4 px-4 sm:px-6 py-2.5 sm:py-3 bg-white/95 backdrop-blur-md border-b border-[#E8E0D5] flex items-center justify-between shadow-xs">
+              <button
+                type="button"
+                onClick={() => setSelectedProduct(null)}
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#3B2F2F] hover:text-[#B8935A] py-1.5 px-3 rounded-lg bg-[#F5F2EB] hover:bg-[#E8E0D5] active:scale-95 transition-all"
+                aria-label="Volver al catálogo"
+              >
+                <ArrowLeft className="h-4 w-4 text-[#B8935A]" />
+                <span>Volver al catálogo</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedProduct(null)}
+                className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-[#F5F2EB] text-[#3B2F2F] hover:bg-[#E8E0D5] hover:text-[#1A1A1A] active:scale-90 transition-all shadow-xs"
+                aria-label="Cerrar ventana"
+              >
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
+              </button>
+            </div>
 
             {/* Modal Body */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
@@ -408,8 +420,9 @@ export function Catalog() {
                   <button
                     type="button"
                     onClick={() => setSelectedProduct(null)}
-                    className="mt-3 flex w-full items-center justify-center rounded-lg border border-[#D8C6B0] bg-white hover:bg-[#F5F2EB] text-[#1A1A1A] py-3 px-6 text-[14px] font-semibold transition-colors"
+                    className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-[#D8C6B0] bg-white hover:bg-[#F5F2EB] text-[#1A1A1A] py-3.5 px-6 text-[14px] font-semibold transition-colors shadow-xs"
                   >
+                    <ArrowLeft className="h-4 w-4 text-[#B8935A]" />
                     <span>Volver al catálogo</span>
                   </button>
                 </div>
