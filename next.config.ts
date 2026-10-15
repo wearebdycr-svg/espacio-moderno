@@ -2,11 +2,11 @@ import type { NextConfig } from "next";
 
 const cspHeader = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarity.ms https://*.clarity.ms",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
-  "img-src 'self' data: blob: https://images.unsplash.com https://*.googleapis.com https://*.firebasestorage.app",
-  "connect-src 'self' https://firestore.googleapis.com https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://identitytoolkit.googleapis.com",
+  "img-src 'self' data: blob: https://images.unsplash.com https://*.googleapis.com https://*.firebasestorage.app https://*.clarity.ms https://c.bing.com",
+  "connect-src 'self' https://firestore.googleapis.com https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://identitytoolkit.googleapis.com https://*.clarity.ms https://c.bing.com https://vitals.vercel-insights.com",
   "frame-src 'self' https://maps.google.com https://www.google.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
