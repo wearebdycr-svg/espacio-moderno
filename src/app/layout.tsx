@@ -94,7 +94,7 @@ export default function RootLayout({
     priceRange: "$$$",
   };
 
-  const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
+  const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID || process.env.CLARITY_ID;
 
   return (
     <html lang="es" className="antialiased scroll-smooth">
